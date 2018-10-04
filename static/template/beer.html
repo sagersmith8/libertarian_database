@@ -1,0 +1,50 @@
+{%extends "base.html"%}
+
+{%block title%}Brewebery{%endblock%}
+
+
+{% block extrastyle %}
+
+{% endblock %}
+
+{%block body%}
+ <div id="title">
+     <hr>
+     <h1>
+       Beer on tap
+     </h1>
+     WHAT WE'RE CURRENTLY POURING
+     <hr>
+ </div>
+  {% for val in data %}
+    <div>
+        <h2>{{val.name}}</h2>
+        {{val.description}}
+        {{val.type}}
+        <br>
+        {{val.cost_cup}}
+        {{val.cost_pint}}
+        {{val.cost_crowler}}
+        {{val.cost_growler}}
+    </div>
+  {% endfor %}
+<br><br>
+ <form action="/new_beer" method="POST">
+     Name:
+     <input type="text" name="name" value="The Best Beer"/><br>
+     Description:
+     <input type="text" name="description" value="Super tasty ipa"/><br>
+     Type:
+     <input type="text" name="type" value="IPA"/><br>
+     Cost Cup:
+     <input type="text" name="cost_cup" value="2.0"/><br>
+     Cost Pint:
+     <input type="text" name="cost_pint" value="4.0"/><br>
+     Cost Crowler:
+     <input type="text" name="cost_crowler" value="6.0"/><br>
+     Cost Growler:
+     <input type="text" name="cost_growler" value="8.0"/>
+     <br><br>
+    <input type="submit" name="submit" value="Set user data" />
+ </form>
+{%endblock%}

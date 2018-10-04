@@ -1,0 +1,16 @@
+body {
+    font-family: Lato;
+    text-align: center;
+    color: rgb(0, 104, 55);
+    border-color: rgb(0, 104, 55);
+}
+
+h1 {
+    font-size: 2em;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+#title {
+    margin: 50px;
+}
