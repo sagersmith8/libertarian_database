@@ -1,5 +1,5 @@
-gae_starter
-===========
+Libertarian Website
+============
 
 This is a simple GAE starter to show how easy it is to get a server running on App Engine, so you can focus on client-side aspects of your project.
 
